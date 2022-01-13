@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>broken_hashserver.html</h1>
-    <p>Report generated on 12-Jan-2022 at 03:58:10 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 13-Jan-2022 at 02:42:03 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -259,7 +259,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.10.0</td></tr></table>
     <h2>Summary</h2>
-    <p>11 tests ran in 29.63 seconds. </p>
+    <p>11 tests ran in 26.19 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">8 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">3 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -279,16 +279,16 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">def test_verify_invalid_hash_post_fails():<br/>&gt;       pass_w, status_code, job_id = client.create_hash_password(<br/>            endpoint=&quot;hash&quot;, body={&quot;username&quot;: &quot;xassword&quot;}<br/>        )<br/><br/>tests\broken_hashserve_test.py:32: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>clients\modules\hashing_clients.py:46: in create_hash_password<br/>    original_password, response_code, job_id = self.__generate_unique_password(<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;clients.modules.hashing_clients.HashingClient object at 0x0000016B8A952CB0&gt;, endpoint = &#x27;hash&#x27;, body = {&#x27;username&#x27;: &#x27;xassword&#x27;}<br/><br/>    def __generate_unique_password(self, endpoint, body=None):<br/>        if body is None:<br/>            pass_word = &quot;&quot;.join(<br/>                random.SystemRandom().choice(string.ascii_letters + string.digits)<br/>                for _ in range(10)<br/>            )<br/>            payload = dumps({&quot;password&quot;: pass_word})<br/>        else:<br/>&gt;           pass_word = body[&#x27;password&#x27;]<br/><span class="error">E           KeyError: &#x27;password&#x27;</span><br/><br/>clients\modules\hashing_clients.py:60: KeyError<br/></div></td></tr></tbody>
+            <div class="log">def test_verify_invalid_hash_post_fails():<br/>&gt;       pass_w, status_code, job_id = client.create_hash_password(<br/>            endpoint=&quot;hash&quot;, body={&quot;username&quot;: &quot;xassword&quot;}<br/>        )<br/><br/>tests\broken_hashserve_test.py:30: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>clients\modules\hashing_clients.py:46: in create_hash_password<br/>    original_password, response_code, job_id = self.__generate_unique_password(<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;clients.modules.hashing_clients.HashingClient object at 0x000001EBD76D2DA0&gt;, endpoint = &#x27;hash&#x27;, body = {&#x27;username&#x27;: &#x27;xassword&#x27;}<br/><br/>    def __generate_unique_password(self, endpoint, body=None):<br/>        if body is None:<br/>            pass_word = &quot;&quot;.join(<br/>                random.SystemRandom().choice(string.ascii_letters + string.digits)<br/>                for _ in range(10)<br/>            )<br/>            payload = dumps({&quot;password&quot;: pass_word})<br/>        else:<br/>&gt;           pass_word = body[&#x27;password&#x27;]<br/><span class="error">E           KeyError: &#x27;password&#x27;</span><br/><br/>clients\modules\hashing_clients.py:60: KeyError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">tests/broken_hashserve_test.py::test_verify_post_request_to_stats_fails</td>
-          <td class="col-duration">0.06</td>
+          <td class="col-duration">0.08</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">FAILURE: <br/>assert 200 == 405<br/>  +200<br/>  -405<br/>tests\broken_hashserve_test.py:46 in test_verify_post_request_to_stats_fails() -&gt; check.equal(status_code, requests.codes.not_allowed)<br/>------------------------------------------------------------<br/>Failed Checks: 1<br/>------------------------------------------------------------<br/>def test_verify_post_request_to_stats_fails():<br/>        pass_w, status_code, job_id = client.create_hash_password(<br/>            endpoint=&quot;stats&quot;, body=None<br/>        )<br/>        check.equal(status_code, requests.codes.not_allowed)<br/>&gt;       assert job_id is None<br/><span class="error">E       assert &#x27;{&quot;TotalRequests&quot;:1,&quot;AverageTime&quot;:4987600}&#x27; is None</span><br/><br/>tests\broken_hashserve_test.py:47: AssertionError<br/></div></td></tr></tbody>
+            <div class="log">FAILURE: <br/>assert 200 == 405<br/>  +200<br/>  -405<br/>tests\broken_hashserve_test.py:44 in test_verify_post_request_to_stats_fails() -&gt; check.equal(status_code, requests.codes.not_allowed)<br/>------------------------------------------------------------<br/>Failed Checks: 1<br/>------------------------------------------------------------<br/>def test_verify_post_request_to_stats_fails():<br/>        pass_w, status_code, job_id = client.create_hash_password(<br/>            endpoint=&quot;stats&quot;, body=None<br/>        )<br/>        check.equal(status_code, requests.codes.not_allowed)<br/>&gt;       assert job_id is None<br/><span class="error">E       assert &#x27;{&quot;TotalRequests&quot;:1,&quot;AverageTime&quot;:6987300}&#x27; is None</span><br/><br/>tests\broken_hashserve_test.py:45: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
@@ -297,7 +297,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log">def test_verify_stats_post_request_fails():<br/>        stats_post_response = client.post_request()<br/>&gt;       assert stats_post_response.status_code == requests.codes.not_allowed<br/><span class="error">E       assert 200 == 405</span><br/><span class="error">E         +200</span><br/><span class="error">E         -405</span><br/><br/>tests\broken_hashserve_test.py:108: AssertionError<br/></div></td></tr></tbody>
+            <div class="log">def test_verify_stats_post_request_fails():<br/>        stats_post_response = client.post_request()<br/>&gt;       assert stats_post_response.status_code == requests.codes.not_allowed<br/><span class="error">E       assert 200 == 405</span><br/><span class="error">E         +200</span><br/><span class="error">E         -405</span><br/><br/>tests\broken_hashserve_test.py:106: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
@@ -314,16 +314,16 @@ server running on port8088<br/></div></td></tr></tbody>
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/broken_hashserve_test.py::test_verify_correctly_formatted_post_request</td>
-          <td class="col-duration">5.51</td>
+          <td class="col-duration">5.52</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Post request success: status_code:200, job_id:1, test_string:uAkgKMaSuh<br/></div></td></tr></tbody>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Post request success: status_code:200, job_id:1, test_string:ZzBIrRU2yQ<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/broken_hashserve_test.py::test_verify_multiple_simultaneous_post</td>
-          <td class="col-duration">5.07</td>
+          <td class="col-duration">5.02</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -332,11 +332,11 @@ server running on port8088<br/></div></td></tr></tbody>
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/broken_hashserve_test.py::test_verify_get_hash_returns_hash</td>
-          <td class="col-duration">5.02</td>
+          <td class="col-duration">5.00</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Post request success: status_code:200, job_id:12, test_string:9EqhbEBmibGet request success: status_code:200, job_id:12, test_string:9EqhbEBmib, hashed:lh3JPQ15/fGfUvCYr9bLffYsrqC121EsPnT5VTZWp/IRlv7chXdIXLMOoY+HS+zWXZBcXi9m9dqXUoz5Q7kMdg==<br/></div></td></tr></tbody>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Post request success: status_code:200, job_id:12, test_string:WirQsLHQVZGet request success: status_code:200, job_id:12, test_string:WirQsLHQVZ, hashed:sl2vwwdIqXTWY2zRtbZMpwU/S+qeCq7f5WCe1bQEVPxGZcXaHzQWM+18kCjkkZ1Va2Sk2dZvxvkTeA5whdNtJA==<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
@@ -354,23 +354,23 @@ server running on port8088<br/></div></td></tr></tbody>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Get request success: status_code:200, test_string:{&#x27;TotalRequests&#x27;: 12, &#x27;AverageTime&#x27;: 498591}<br/></div></td></tr></tbody>
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Get request success: status_code:200, test_string:{&#x27;TotalRequests&#x27;: 12, &#x27;AverageTime&#x27;: 582275}<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/broken_hashserve_test.py::test_verify_graceful_shutdown_during</td>
-          <td class="col-duration">8.73</td>
+          <td class="col-duration">6.01</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Graceful shutdown: status_code:200,number_0f_runs500<br/> ------------------------------Captured stderr call------------------------------ <br/>2022/01/12 03:58:08 Shutdown signal recieved
-<br/> ----------------------------Captured stderr teardown---------------------------- <br/>2022/01/12 03:58:08 Shutting down
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>Graceful shutdown: status_code:200,number_0f_runs500<br/> ------------------------------Captured stderr call------------------------------ <br/>2022/01/13 02:42:01 Shutdown signal recieved
+2022/01/13 02:42:01 Shutting down
 <br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/broken_hashserve_test.py::test_verify_no_connection_after_shutdown</td>
-          <td class="col-duration">2.33</td>
+          <td class="col-duration">2.03</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">

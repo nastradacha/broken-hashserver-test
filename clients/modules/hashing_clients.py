@@ -30,7 +30,7 @@ class HashingClient(BaseClient):
         except:
             print("Connected to the server ")
             my_file = (
-                r"C:\Users\Nastracha\projects\broken-hashserve\broken-hashserve_win.exe"
+                r"broken-hashserve_win.exe"
             )
             subprocess.Popen(my_file)
         return f'server running on port{port}'
